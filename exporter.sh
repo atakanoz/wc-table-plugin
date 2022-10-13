@@ -1,0 +1,1 @@
+zip -rq wc-table-plugin.zip . -x node_modules/\* .git/\* .env resources/admin/source/\* resources/admin/views/\* resources/public/source/\* resources/public/views/\* .editorconfig .prettierrc .stylelintrc .yarnrc.yml composer.json composer.lock .yarn/\* mix-manifest.json package.json safelist.txt tailwind.config.js webpack.mix.js yarn.lock .gitignore

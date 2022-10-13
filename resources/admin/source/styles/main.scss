@@ -1,0 +1,36 @@
+#post-body-content,
+.carbon-box {
+	@import "tailwindcss/base";
+	@import "tailwindcss/components";
+	@import "tailwindcss/utilities";
+
+	// Shortcode Informer Style.
+	.comparison-shortcode {
+		@apply flex border border-[#8D8F94] rounded-sm px-[10px] py-[8px] mt-[5px] border-opacity-70 border-solid;
+	}
+
+	// Carbon Fields Customizations.
+	.cf-complex__tabs-item {
+		@apply justify-center;
+	}
+
+	.cf-complex__tabs--tabbed-vertical {
+		@apply flex-[0_0_7%];
+	}
+
+	.cf-field__help {
+		@apply not-italic bg-orange-100 text-orange-900 rounded-sm inline-flex px-4 py-2 text-xs;
+	}
+
+	.cf-file__preview {
+		@apply bg-white shadow-none bottom-0;
+	}
+
+	.cf-file__name {
+		@apply hidden;
+	}
+
+	.cf-file__content ~ .cf-file__browse {
+		@apply mb-0;
+	}
+}

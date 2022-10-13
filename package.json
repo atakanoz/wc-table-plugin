@@ -1,0 +1,41 @@
+{
+  "name": "pluginkit",
+  "version": "1.0.0",
+  "description": "The simplest WordPress plugin boilerplate including full setup for Sass, PostCSS, Autoprefixer, stylelint, Webpack, Browsersync, etc.",
+  "scripts": {
+    "dev": "mix watch",
+    "build": "mix",
+    "build:production": "mix --production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atakanoz/ComparisonTable.git"
+  },
+  "keywords": [],
+  "author": "Kite",
+  "license": "GPL-2.0+",
+  "homepage": "https://github.com/atakanoz/ComparisonTable.git",
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "browser-sync": "^2.27.7",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "copy-webpack-plugin": "^8.1.1",
+    "laravel-mix": "^6.0.41",
+    "laravel-mix-stylelint": "^1.0.0",
+    "postcss": "^8.2.15",
+    "postcss-import": "^14.0.2",
+    "postcss-nested": "^5.0.5",
+    "postcss-nested-ancestors": "^2.0.0",
+    "prettier": "^2.3.0",
+    "resolve-url-loader": "^4.0.0",
+    "sass": "^1.32.13",
+    "sass-loader": "^11.1.0",
+    "stylelint": "^14.7.1",
+    "stylelint-config-standard": "^25.0.0",
+    "stylelint-webpack-plugin": "^3.2.0",
+    "tailwindcss": "^3.0.24",
+    "webpack": "^5.68.0",
+    "webpack-livereload-plugin": "^3.0.2"
+  },
+  "packageManager": "yarn@3.1.1"
+}

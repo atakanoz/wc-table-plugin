@@ -1,0 +1,116 @@
+.wc-table {
+	@import "tailwindcss/base";
+	@import "tailwindcss/components";
+	@import "tailwindcss/utilities";
+
+	@apply border-[#d0d7d6] rounded-[10px] min-w-full lg:min-w-[730px] border mb-5 border-solid shadow-[0px_4px_0px_#e0e0e0];
+
+	.comparison-table {
+		@apply border-collapse overflow-visible w-full lg:w-auto;
+
+		tr {
+			@apply border border-solid border-transparent flex flex-col lg:table-row;
+		}
+
+		.table-head {
+			@apply text-[#247667] bg-[#ebf5f3] font-bold uppercase p-[7px];
+
+			th {
+				@apply p-[5px] leading-[1.2] text-base border-none font-extrabold text-[15px] flex flex-col lg:table-cell;
+
+				&.wc-image,
+				&.wc-product {
+					@apply w-full lg:w-[20%];
+				}
+
+				&.wc-features {
+					@apply w-[30%];
+				}
+
+				&:not(.wc-product) {
+					@apply hidden lg:table-cell;
+				}
+			}
+		}
+
+		.comparison-row {
+			@apply border-b border-b-[#d0d7d6] relative;
+
+			td {
+				@apply p-[6px] flex flex-col justify-center lg:table-cell;
+
+				&.comparison_badge {
+					@apply text-center order-1;
+
+					.wc-badge-text {
+						@apply bg-teal-500 text-white w-max text-center uppercase no-underline my-5 lg:my-0 mx-auto font-extrabold tracking-[-0.01em] text-xs block relative lg:absolute lg:top-[6px] lg:-left-[14px] py-[6px] px-[14px] leading-[1] z-[10];
+
+						&:before {
+							content: "";
+							width: 0;
+							height: 0;
+							position: absolute;
+							left: 0;
+							bottom: -23px;
+							content: "";
+							border-bottom: 23px solid transparent;
+							border-right: 13px solid#1A6C68;
+
+							@apply hidden lg:block;
+						}
+					}
+
+					.wc-badge-image {
+						@apply text-center;
+
+						img {
+							@apply w-[65px] h-[65px] mx-auto;
+						}
+					}
+				}
+
+				&.comparison_product_image {
+					@apply text-center order-3 lg:order-2;
+
+					img {
+						@apply mx-auto;
+					}
+				}
+
+				&.comparison-product_name {
+					@apply capitalize font-extrabold leading-[1.2] text-[#3a3a3a] text-base text-center lg:text-left order-2 lg:order-3;
+				}
+
+				&.comparison-feature_list {
+					@apply order-4;
+
+					ul {
+						@apply list-none p-0 max-w-[300px] mx-auto lg:max-w-none mb-5 lg:mb-0;
+
+						li {
+							@apply list-none text-base text-[#3a3a3a] leading-[1.4] pl-[22px] relative;
+
+							svg {
+								@apply absolute left-0 top-1;
+							}
+						}
+					}
+				}
+
+				&.comparison-link {
+					@apply mb-5 lg:mb-0 flex-row order-5;
+
+					.wc-button {
+						@apply text-[#382b01] bg-[#f9c427] border border-[#af8a1c] border-solid hover:shadow-none transition-all shadow-[0px_3px_0px_0px_#b98c08] rounded-[10px] py-[10px] px-[14px] inline-flex justify-center items-center font-bold text-[14px] no-underline;
+					}
+				}
+			}
+
+			&.has-badge {
+				td {
+					@apply pt-0 lg:pt-[30px];
+				}
+			}
+		}
+	}
+}
