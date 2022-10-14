@@ -109,7 +109,7 @@ class Backend {
 		->where( 'post_type', '=', 'comparison_table' )
 		->add_fields(
 			array(
-				Field::make( 'complex', 'crb_slides', 'Slides' )
+				Field::make( 'complex', 'crb_slides', 'Products' )
 				->set_layout( 'tabbed-vertical' )
 				->add_fields(
 					array(
