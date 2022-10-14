@@ -47,7 +47,7 @@ define( 'COMPARISON_TABLE_PLUGIN_URL', trailingslashit( plugin_dir_url( COMPARIS
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-require COMPARISON_TABLE_PLUGIN_DIR . 'app/core/class-wc-table.php';
+require COMPARISON_TABLE_PLUGIN_DIR . 'inc/class-wc-table.php';
 
 /**
  * Begins execution of the plugin.

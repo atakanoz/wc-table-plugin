@@ -104,7 +104,7 @@ class Init {
 	 */
 	private function load_dependencies() {
 
-		$includes_paths = COMPARISON_TABLE_PLUGIN_DIR . 'app/core/*.php';
+		$includes_paths = COMPARISON_TABLE_PLUGIN_DIR . 'inc/*.php';
 
 		foreach ( glob( '{' . $includes_paths . '}', GLOB_BRACE ) as $filename ) {
 			require_once $filename;
@@ -142,6 +142,8 @@ class Init {
 
 		// Add the Shortcode.
 		$this->loader->add_action( 'init', $plugin_admin, 'winners_shortcode' );
+
+		$this->loader->add_filter( 'post_row_actions', $plugin_admin, 'remove_view_button', 10, 1 );
 
 	}
 

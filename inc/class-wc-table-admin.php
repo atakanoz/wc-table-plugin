@@ -189,6 +189,21 @@ class Backend {
 	}
 
 	/**
+	 * Remove View Button
+	 *
+	 * @param  mixed $actions
+	 * @return void
+	 */
+	public function remove_view_button( $actions ) {
+
+		// Remove view button in CPT page... just to make sure there is no confusion.
+		if ( get_post_type() === 'comparison_table' ) {
+			unset( $actions['view'] );
+		}
+		return $actions;
+	}
+
+	/**
 	 * Get Post Type
 	 *
 	 * @return void
